@@ -6,6 +6,17 @@ body {
     background-image: url(Images/Sounds.png);
 }
 
+div.top-bar {
+    background-color: #f8c50f;
+}
+
+ul.dropdown.menu {
+    background-color: #f8c50f;
+}
+/* header {
+    background-color: #f8c50f;
+} */
+
 .grid-container {
     margin-top: 40px;
     margin-bottom: 80px;
@@ -29,6 +40,11 @@ body {
     padding: 10px;
     height: 200px;
     width: auto;
+}
+
+
+footer.footer-nav.row.top-bar {
+    background-color: #15af9d;
 }
 
 footer {
