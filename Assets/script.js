@@ -10,6 +10,7 @@ var bookCard =  $("#bookCard");
 // var movieArr = (!savedMovies) ? [] : JSON.parse(savedMovies);
 var movieAPI = "f9bb3ed8";
 var bookAPI = "HlkvA90diPLiYVjDMkKAw";
+var bookSecret = "whjSTLdm1vCndZwtplPVHsUQ0lvXKUefykpQWKdQyw"
 var movieTitle= "";
 var bookTitle= "";
 var movieGenre= "";
