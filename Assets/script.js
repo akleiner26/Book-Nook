@@ -35,7 +35,6 @@ var renderMovies = (movieTitle) => {
     $(movieCard).append(moviePlotTxt)
 }
 
-////this is a test
 
 
 // Event listener for search button and anon function to set movie title input to variable
