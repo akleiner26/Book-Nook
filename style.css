@@ -16,6 +16,9 @@ ul.dropdown.menu {
 /* header {
     background-color: #f8c50f;
 } */
+a {
+    color: #5e8205;
+}
 
 .grid-container {
     margin-top: 40px;
@@ -36,6 +39,16 @@ ul.dropdown.menu {
     /* padding-bottom: 30px; */
 }
 
+.card-divider {
+    text-align: center;
+}
+
+.image {
+    padding: 20px;
+    height: auto;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 .image {
     padding: 10px;
     height: 200px;
@@ -56,4 +69,17 @@ footer {
     bottom: 0;
     min-width: 100%;
     min-height: 60px;
+}
+
+@import 'util/util';
+/* Small only
+@media screen and (max-width: 39.9375em) {}
+/* Medium and up */
+/* @media screen and (min-width: 40em) {} */
+/* Medium only */
+/* @media screen and (min-width: 40em) and (max-width: 63.9375em) {} */
+/* Large and up */
+/* @media screen and (min-width: 64em) {} */
+/* Large only */
+/* @media screen and (min-width: 64em) and (max-width: 74.9375em) {} */ */
 }
