@@ -18,7 +18,6 @@ var movieGenre= "";
 var bookGenre= "";
 /////////////////////////////////////////////
 //Functions
-///this is a test
 var renderMovies = (movieData) => {
     $(movieCard).empty();
     var movieTitleTxt = $(searchTxt).val();
