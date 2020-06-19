@@ -16,6 +16,27 @@ var bookTitle= "";
 var movieGenre= "";
 var bookGenre= "";
 /////////////////////////////////////////////
+//Functions
+
+var renderMovies = (movieTitle) => {
+    $(movieCard).empty();
+    var movieTitle = $(searchTxt).val();
+    var movieImg = dloadMovieImg;
+    var actors = `<p>${dloadActors}</p>`;
+    $(movieCard).append(actors);
+    var movieGenre = dloadMovieGenre;
+    var movieGenreTxt = `<p>${movieGenre}`;
+    $(movieCard).append(movieGenreTxt);
+    var movieYr = dloadMovieYr;
+    var movieYrTxt = `<p>${movieYR}</p>`;
+    $(movieCard).append(movieYrTxt);
+    var moviePlot = dloadMoviePlot;
+    var moviePlotTxt = `<p>${moviePlot}</p>`
+    $(movieCard).append(moviePlotTxt)
+}
+
+
+
 
 // Event listener for search button and anon function to set movie title input to variable
 
