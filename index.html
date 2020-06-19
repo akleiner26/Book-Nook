@@ -1,0 +1,79 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Change title -->
+    <title>Project1</title>
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <!-- My stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="menu-text">Book Nook</li>
+                    <!-- Optional Links -->
+                    <li><a href="#">My Book Nook</a></li>
+                    <li><a href="#">Library</a></li>
+                </ul>
+            </div>
+            <!-- Search Bar/Button -->
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><input id="searchTxt" type="search" placeholder="Enter Movie Title"></li>
+                    <li><button id="searchBtn" type="button" class="button">Search</button></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Instead of having images on html, make them divs that the js will append to or make origianl images blank and replace source value of those images could leave teh backgoround invisible. have images change in width and height 
+        imge property that adjust apect ratio. Can't have fixed image height.-->
+        <!-- New Section  -->
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x small-up-1 medium-up-2">
+                <!-- Movie -->
+                <div class="cell">
+                    <div class="card">
+                        <div class="card-divider">
+                            Movies!
+                        </div>
+                        <div class="card-section">
+                            <img id="movieImg" class="image align-self" src="https://via.placeholder.com/200">
+                        </div>
+                        <div class="card-section">
+                            <div id="movieTitle"></div>
+                            <h4 id="movieCard">This is a row of cards.</h4>
+                            <!-- <p>This row of cards is embedded in an X-Y Block Grid.</p> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Book -->
+                <div class="cell">
+                    <div class="card">
+                        <div class="card-divider">
+                            Books!
+                        </div>
+                        <div class="card-section">
+                            <img id="movieImg" class="image align-self" src="https://via.placeholder.com/200">
+                        </div>
+                        <div class="card-section">
+                            <div id="bookTitle"></div>
+                            <h4 id="bookCard">This is a card.</h4>
+                            <!-- <p>It has an easy to override visual style, and is appropriately subdued.</p> -->
+                        </div>
+                    </div>
+                </div>
+    </main>
+    <footer class="footer-nav row top-bar">
+    </footer>
+    <!-- Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+</body>
+</html>
