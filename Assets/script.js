@@ -1,5 +1,5 @@
 /////////////////////////////////////////////
-//Variables
+//Variables//
 var searchTxt = $("#searchTxt");
 var searchBtn = $("#searchBtn");
 var movieImg = $("#movieImg");
