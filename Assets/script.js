@@ -42,7 +42,7 @@ var renderBooks = (bookPickData) => {
     $(bookCard).append(bookGenreTxt);
     var bookAuthor = `<p>Author: ${bookPickData.artistName}</p>`;
     $(bookCard).append(bookAuthor);
-    var bookYr = `<p>Publication Year: ${bookPickData.releaseDate.substring(0,3)}</p>`;
+    var bookYr = `<p>Publication Year: ${bookPickData.releaseDate.substring(0,4)}</p>`;
     $(bookCard).append(bookYr);
     var bookPlot = `<p>Plot: ${bookPickData.description}</p>`;
     $(bookCard).append(bookPlot);
