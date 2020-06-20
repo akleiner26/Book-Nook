@@ -20,47 +20,41 @@ var bookGenre= "";
 //Functions
 var renderMovies = (movieData) => {
     $(movieCard).empty();
-    movieTitleTxt = $(searchTxt).val();
-    movieImg.attr("src",movieData.Poster);
+    movieImg.attr("src", movieData.Poster);
     var actors = `<p>${movieData.Actors}</p>`;
-    $(movieCard).append(actors);
+    movieCard.append(actors);
     movieGenre = movieData.Genre;
-    var movieGenreTxt = `<p>${movieGenre}`;
-    $(movieCard).append(movieGenreTxt);
-    movieYr = movieData.Year;
+    // var movieGenreTxt = `<p>${movieGenre}`;
+    movieCard.text(movieGenre);
+    // $(movieCard).append(movieGenreTxt);
+
+    // These are being appended within an h4 tag...
+    var movieYR = movieData.Year;
     var movieYrTxt = `<p>${movieYR}</p>`;
     $(movieCard).append(movieYrTxt);
     var moviePlot = movieData.Plot;
     var moviePlotTxt = `<p>${moviePlot}</p>`
-    $(movieCard).append(moviePlotTxt)
+    $(movieCard).append(moviePlotTxt);
 }
 
-var renderBooks = (bookData) => {
+var renderBooks = (bookPickData) => {
     $(bookCard).empty();
-    bookTitle = bookDataArray.trackCensoredName;
-    bookImg.attr("src", bookDataArray.artworkUrl60);
-    var bookGenreTxt = `<p>${bookDataArray.genres[0]}</p>`;
+    bookTitle.text(bookPickData.trackCensoredName);
+    bookImg.attr("src", bookPickData.artworkUrl60);
+    // These are currently being appended within an h4 tag...
+    var bookGenreTxt = `<p>${bookPickData.genres[0]}</p>`;
     $(bookCard).append(bookGenreTxt);
-    var bookAuthor = `<p>${bookDataArray.artistName}</p>`;
+    var bookAuthor = `<p>${bookPickData.artistName}</p>`;
     $(bookCard).append(bookAuthor);
-    var bookYr = `<p>${bookDataArray.releaseDate.substring(0,3)}</p>`;
+    var bookYr = `<p>${bookPickData.releaseDate.substring(0,3)}</p>`;
     $(bookCard).append(bookYr);
-    var bookPlot = `<p>${bookDataArray.description}</p>`;
+    var bookPlot = `<p>${bookPickData.description}</p>`;
     $(bookCard).append(bookPlot);
 }
 
+// Event listener for search button and anon function to run ajax function
 $(searchBtn).on("click", function(movieData, bookData){
-    renderMovies();
-    renderBooks();
-})
+    getData(searchTxt.val());
+    searchTxt.val("");
+});
 ///////////////////////////////////////////////////
-
-// Event listener for search button and anon function to set movie title input to variable
-
-// AJAX method to get movie data, including genre
-
-    // Display movie image and other info
-
-    // AJAX method to get book data
-        // Randomly select book title from genre category
-        // Display book image and other info
