@@ -19,36 +19,32 @@ var bookGenre= "";
 /////////////////////////////////////////////
 //Functions
 var renderMovies = (movieData) => {
-    $(movieCard).empty();
+    movieCard.empty();
     movieImg.attr("src", movieData.Poster);
-    var actors = `<p>${movieData.Actors}</p>`;
+    var actors = `<p>Top Billed Cast: ${movieData.Actors}</p>`;
     movieCard.append(actors);
     movieGenre = movieData.Genre;
-    // var movieGenreTxt = `<p>${movieGenre}`;
-    movieCard.text(movieGenre);
-    // $(movieCard).append(movieGenreTxt);
-
-    // These are being appended within an h4 tag...
+    var movieGenreTxt = `<p>${movieGenre}`;
+    $(movieCard).append(movieGenreTxt);
     var movieYR = movieData.Year;
-    var movieYrTxt = `<p>${movieYR}</p>`;
-    $(movieCard).append(movieYrTxt);
+    var movieYrTxt = `<p>Release Year: ${movieYR}</p>`;
+    movieCard.append(movieYrTxt);
     var moviePlot = movieData.Plot;
-    var moviePlotTxt = `<p>${moviePlot}</p>`
-    $(movieCard).append(moviePlotTxt);
+    var moviePlotTxt = `<p>Plot: ${moviePlot}</p>`
+    movieCard.append(moviePlotTxt);
 }
 
 var renderBooks = (bookPickData) => {
     $(bookCard).empty();
     bookTitle.text(bookPickData.trackCensoredName);
-    bookImg.attr("src", bookPickData.artworkUrl60);
-    // These are currently being appended within an h4 tag...
-    var bookGenreTxt = `<p>${bookPickData.genres[0]}</p>`;
+    bookImg.attr("src", bookPickData.artworkUrl100);
+    var bookGenreTxt = `<p>Book Genre: ${bookPickData.genres[0]}</p>`;
     $(bookCard).append(bookGenreTxt);
-    var bookAuthor = `<p>${bookPickData.artistName}</p>`;
+    var bookAuthor = `<p>Author: ${bookPickData.artistName}</p>`;
     $(bookCard).append(bookAuthor);
-    var bookYr = `<p>${bookPickData.releaseDate.substring(0,3)}</p>`;
+    var bookYr = `<p>Publication Year: ${bookPickData.releaseDate.substring(0,3)}</p>`;
     $(bookCard).append(bookYr);
-    var bookPlot = `<p>${bookPickData.description}</p>`;
+    var bookPlot = `<p>Plot: ${bookPickData.description}</p>`;
     $(bookCard).append(bookPlot);
 }
 
