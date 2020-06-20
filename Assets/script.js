@@ -19,6 +19,7 @@ var bookGenre= "";
 /////////////////////////////////////////////
 //Functions
 var renderMovies = (movieData) => {
+    movieTitle.text(movieData.Title)
     movieCard.empty();
     movieImg.attr("src", movieData.Poster);
     var actors = `<p>Top Billed Cast: ${movieData.Actors}</p>`;
