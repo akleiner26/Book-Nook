@@ -19,6 +19,7 @@ var bookGenre= "";
 /////////////////////////////////////////////
 //Functions
 var renderMovies = (movieData) => {
+    movieTitle.text(movieData.Title)
     movieCard.empty();
     movieImg.attr("src", movieData.Poster);
     var actors = `<p>Top Billed Cast: ${movieData.Actors}</p>`;
@@ -42,7 +43,7 @@ var renderBooks = (bookPickData) => {
     $(bookCard).append(bookGenreTxt);
     var bookAuthor = `<p>Author: ${bookPickData.artistName}</p>`;
     $(bookCard).append(bookAuthor);
-    var bookYr = `<p>Publication Year: ${bookPickData.releaseDate.substring(0,3)}</p>`;
+    var bookYr = `<p>Publication Year: ${bookPickData.releaseDate.substring(0,4)}</p>`;
     $(bookCard).append(bookYr);
     var bookPlot = `<p>Plot: ${bookPickData.description}</p>`;
     $(bookCard).append(bookPlot);
