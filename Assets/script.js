@@ -25,7 +25,7 @@ var renderMovies = (movieData) => {
     var actors = `<p>Top Billed Cast: ${movieData.Actors}</p>`;
     movieCard.append(actors);
     movieGenre = movieData.Genre;
-    var movieGenreTxt = `<p>${movieGenre}`;
+    var movieGenreTxt = `<p>Genre: ${movieGenre}`;
     $(movieCard).append(movieGenreTxt);
     var movieYR = movieData.Year;
     var movieYrTxt = `<p>Release Year: ${movieYR}</p>`;
@@ -51,6 +51,8 @@ var renderBooks = (bookPickData) => {
 
 // Event listener for search button and anon function to run ajax function
 $(searchBtn).on("click", function(movieData, bookData){
+    $("body").attr("class", "background2");
+    $(".grid-container").css("display", "block");
     getData(searchTxt.val());
     searchTxt.val("");
 });
