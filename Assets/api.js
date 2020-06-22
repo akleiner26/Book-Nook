@@ -31,8 +31,9 @@ function getData(movieTitle) {
 
             // Display book info
             renderBooks(bookPickData);
-    
-
+            var movieTitle = movieData.Title;
+            var bookTitle = bookPickData.trackCensoredName;
+            sendLocalStorage(movieTitle, bookTitle);
             // AJAX method to get book image
             var book = bookPickData.trackCensoredName + " book cover";
             var bookAPIKey = "3609f30836c8439cb1d9f465c4edfbec";
