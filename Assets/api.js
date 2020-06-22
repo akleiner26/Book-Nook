@@ -32,13 +32,17 @@ function getData(movieTitle) {
             // Display book info
             console.log(bookPickData);
             renderBooks(bookPickData);
+
+            // Save titles to local storage
             var movieTitle = movieData.Title;
             var bookTitle = bookPickData.trackCensoredName;
             sendLocalStorage(movieTitle, bookTitle);
+
             // AJAX method to get book image
-            var book = bookPickData.trackCensoredName + " book cover";
+            var author = bookPickData.artistName;
+            var book = bookPickData.trackCensoredName + "by " + author + " book cover ";
             var bookAPIKey = "3609f30836c8439cb1d9f465c4edfbec";
-            var bookImageURL = "https://book-image.cognitiveservices.azure.com/bing/v7.0/images/search?q=" + book;
+            var bookImageURL = "https://book-image.cognitiveservices.azure.com/bing/v7.0/images/search?q=" + book + "&count=1";
             var corsHelp = "https://cors-anywhere.herokuapp.com/";
             $.ajax({
                 url: corsHelp + bookImageURL,
