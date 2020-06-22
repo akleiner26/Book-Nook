@@ -31,9 +31,10 @@ function getData(movieTitle) {
 
             // Display book info
             renderBooks(bookPickData);
+    
 
             // AJAX method to get book image
-            var book = bookPickData.trackCensoredName;
+            var book = bookPickData.trackCensoredName + " book cover";
             var bookAPIKey = "3609f30836c8439cb1d9f465c4edfbec";
             var bookImageURL = "https://book-image.cognitiveservices.azure.com/bing/v7.0/images/search?q=" + book;
             var corsHelp = "https://cors-anywhere.herokuapp.com/";
@@ -43,6 +44,7 @@ function getData(movieTitle) {
                 beforeSend: function (xhr) { xhr.setRequestHeader("Ocp-Apim-Subscription-Key", bookAPIKey); }
             }).then((bookImageData) => {
                 console.log(bookImageData);
+                renderBookImg(bookImageData);
             });
         });
     });
