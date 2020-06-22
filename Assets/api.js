@@ -30,6 +30,7 @@ function getData(movieTitle) {
             var bookPickData = bookDataArray[randomNum];
 
             // Display book info
+            console.log(bookPickData);
             renderBooks(bookPickData);
             var movieTitle = movieData.Title;
             var bookTitle = bookPickData.trackCensoredName;

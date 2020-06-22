@@ -38,8 +38,9 @@ var renderMovies = (movieData) => {
     movieCard.append(moviePlotTxt);
 }
 
-var renderBooks = (bookPickData, bookImageData) => {
+var renderBooks = (bookPickData) => {
     $(bookCard).empty();
+    $("#bookLink").attr("href", bookPickData.trackViewUrl);
     bookTitle.text(bookPickData.trackCensoredName);
     // bookImg.attr("src", bookPickData.artworkUrl100);
     var bookGenreTxt = `<p><strong>Book Genre: </strong>${bookPickData.genres[0]}</p>`;
