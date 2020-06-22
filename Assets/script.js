@@ -35,10 +35,10 @@ var renderMovies = (movieData) => {
     movieCard.append(moviePlotTxt);
 }
 
-var renderBooks = (bookPickData) => {
+var renderBooks = (bookPickData, bookImageData) => {
     $(bookCard).empty();
     bookTitle.text(bookPickData.trackCensoredName);
-    bookImg.attr("src", bookPickData.artworkUrl100);
+    // bookImg.attr("src", bookPickData.artworkUrl100);
     var bookGenreTxt = `<p><strong>Book Genre: </strong>${bookPickData.genres[0]}</p>`;
     $(bookCard).append(bookGenreTxt);
     var bookAuthor = `<p><strong>Author: </strong>${bookPickData.artistName}</p>`;
@@ -47,6 +47,10 @@ var renderBooks = (bookPickData) => {
     $(bookCard).append(bookYr);
     var bookPlot = `<p><strong>Plot: </strong>${bookPickData.description}</p>`;
     $(bookCard).append(bookPlot);
+}
+
+var renderBookImg = (bookImageData) => {
+    bookImg.attr("src", bookImageData.value[0].thumbnailUrl);
 }
 
 // Event listener for search button and anon function to run ajax function
