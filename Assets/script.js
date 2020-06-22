@@ -22,16 +22,16 @@ var renderMovies = (movieData) => {
     movieTitle.text(movieData.Title)
     movieCard.empty();
     movieImg.attr("src", movieData.Poster);
-    var actors = `<p>Top Billed Cast: ${movieData.Actors}</p>`;
+    var actors = `<p><strong>Top Billed Cast: </strong>${movieData.Actors}</p>`;
     movieCard.append(actors);
     movieGenre = movieData.Genre;
-    var movieGenreTxt = `<p>Genre: ${movieGenre}`;
+    var movieGenreTxt = `<p><strong>Genre: </strong>${movieGenre}`;
     $(movieCard).append(movieGenreTxt);
     var movieYR = movieData.Year;
-    var movieYrTxt = `<p>Release Year: ${movieYR}</p>`;
+    var movieYrTxt = `<p><strong>Release Year: </strong>${movieYR}</p>`;
     movieCard.append(movieYrTxt);
     var moviePlot = movieData.Plot;
-    var moviePlotTxt = `<p>Plot: ${moviePlot}</p>`
+    var moviePlotTxt = `<p><strong>Plot: </strong>${moviePlot}</p>`
     movieCard.append(moviePlotTxt);
 }
 
@@ -39,13 +39,13 @@ var renderBooks = (bookPickData) => {
     $(bookCard).empty();
     bookTitle.text(bookPickData.trackCensoredName);
     bookImg.attr("src", bookPickData.artworkUrl100);
-    var bookGenreTxt = `<p>Book Genre: ${bookPickData.genres[0]}</p>`;
+    var bookGenreTxt = `<p><strong>Book Genre: </strong>${bookPickData.genres[0]}</p>`;
     $(bookCard).append(bookGenreTxt);
-    var bookAuthor = `<p>Author: ${bookPickData.artistName}</p>`;
+    var bookAuthor = `<p><strong>Author: </strong>${bookPickData.artistName}</p>`;
     $(bookCard).append(bookAuthor);
-    var bookYr = `<p>Publication Year: ${bookPickData.releaseDate.substring(0,4)}</p>`;
+    var bookYr = `<p><strong>Publication Year: </strong>${bookPickData.releaseDate.substring(0,4)}</p>`;
     $(bookCard).append(bookYr);
-    var bookPlot = `<p>Plot: ${bookPickData.description}</p>`;
+    var bookPlot = `<p><strong>Plot: </strong>${bookPickData.description}</p>`;
     $(bookCard).append(bookPlot);
 }
 
