@@ -7,6 +7,7 @@ function getData(movieTitle) {
         url: movieURL,
         method: "GET"
     }).then((movieData) => {
+        console.log(movieData);
         // Grab movieGenre to pass to book API
         var movieGenre = movieData.Genre;
         movieGenre = movieGenre.replace(/(, )/g, "+");
@@ -28,9 +29,21 @@ function getData(movieTitle) {
             var randomNum = Math.floor(Math.random() * bookLimit);
             var bookPickData = bookDataArray[randomNum];
 
-            // Display book image and other info
+            // Display book info
             renderBooks(bookPickData);
 
+            // AJAX method to get book image
+            var book = bookPickData.trackCensoredName;
+            var bookAPIKey = "3609f30836c8439cb1d9f465c4edfbec";
+            var bookImageURL = "https://book-image.cognitiveservices.azure.com/bing/v7.0/images/search?q=" + book;
+            var corsHelp = "https://cors-anywhere.herokuapp.com/";
+            $.ajax({
+                url: corsHelp + bookImageURL,
+                method: "GET",
+                beforeSend: function (xhr) { xhr.setRequestHeader("Ocp-Apim-Subscription-Key", bookAPIKey); }
+            }).then((bookImageData) => {
+                console.log(bookImageData);
+            });
         });
     });
 }
