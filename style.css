@@ -2,13 +2,12 @@
     height: 100%
 } */
 
-body {
+.background2 {
     background-image: url(Images/Sounds.png);
 }
 
-#background1 {
+.background1 {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/2b/Bookshelf.jpg);
-    z-index: 99999;
 }
 
 
@@ -47,6 +46,7 @@ a {
     margin-bottom: 80px;
     height: auto;
     width: auto;
+    display: none;
 }
 
 .card {
