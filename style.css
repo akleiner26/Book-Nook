@@ -7,7 +7,7 @@
 }
 
 .background1 {
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/2b/Bookshelf.jpg);
+    background-image: url(Images/Bookshelf.jpg);
 }
 
 
@@ -66,6 +66,8 @@ a {
 
 /* .info {
     overflow: scroll;
+    overflow-y: scroll;
+    overflow-y: auto;
 } */
 
 div.card-divider {
