@@ -66,6 +66,7 @@ var sendLocalStorage = (movieTitle, bookTitle) => {
 }
 
 var renderBookImg = (bookImageData) => {
+    bookImgDiv.empty();
     var newImage = $("<img>");
     newImage.addClass("image align-self").attr("src", bookImageData.value[0].thumbnailUrl).attr("alt", "Book Cover Image").attr("id", "bookImg");
     bookImgDiv.append(newImage);
