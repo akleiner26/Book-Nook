@@ -58,8 +58,6 @@ a:hover {
     border-radius: 25px;
     margin-right: 10px;
     margin-left: 10px;
-    z-index: 0;
-    overflow-y: auto;
 }
 
 h3 {
@@ -71,6 +69,10 @@ div.card-divider {
     color: White;
     font-weight: bolder;
     font-size: larger;
+}
+
+.scroll {
+    overflow-y: auto;
 }
 
 .card-img {
