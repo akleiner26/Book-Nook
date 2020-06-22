@@ -8,7 +8,6 @@ var bookTitle= $("#bookTitle");
 var movieTitle= $("#movieTitle");
 var movieCard= $("#movieCard");
 var bookCard =  $("#bookCard");
-// var movieArr = (!savedMovies) ? [] : JSON.parse(savedMovies);
 var movieAPI = "f9bb3ed8";
 var bookAPI = "HlkvA90diPLiYVjDMkKAw";
 var bookSecret = "whjSTLdm1vCndZwtplPVHsUQ0lvXKUefykpQWKdQyw"
@@ -16,6 +15,10 @@ var movieTitleTxt= "";
 var bookTitleTxt= "";
 var movieGenre= "";
 var bookGenre= "";
+var savedBooks = localStorage.getItem("savedBooks");
+var savedMovies = localStorage.getItem("savedMovies");
+var bookArr = (!savedBooks) ? [] : JSON.parse(savedBooks);
+var movieArr = (!savedMovies) ? [] : JSON.parse(savedMovies);
 /////////////////////////////////////////////
 //Functions
 var renderMovies = (movieData) => {
@@ -48,6 +51,17 @@ var renderBooks = (bookPickData) => {
     $(bookCard).append(bookYr);
     var bookPlot = `<p><strong>Plot: </strong>${bookPickData.description}</p>`;
     $(bookCard).append(bookPlot);
+}
+
+var sendLocalStorage = (movieTitle, bookTitle) => {
+    console.log(movieArr);
+    console.log(bookArr);
+    movieArr.unshift(movieTitle);
+    console.log(movieTitle);
+    bookArr.unshift(bookTitle);
+    console.log(bookTitle);
+    localStorage.setItem("savedBooks", JSON.stringify(bookArr));
+    localStorage.setItem("savedMovies", JSON.stringify(movieArr));
 }
 
 var renderBookImg = (bookImageData) => {
