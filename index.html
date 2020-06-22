@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,13 @@
     <!-- My stylesheet -->
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+
+<body class="background1">
     <header>
-        <div class="top-bar">
+        <div class="top-bar small-up-1">
             <div class="top-bar-left">
                 <ul class="dropdown menu" data-dropdown-menu>
-                    <li class="menu-text">Book Nook</li>
+                    <li id="bookNook" class="menu-text">Book Nook</li>
                     <!-- Optional Links -->
                     <li><a href="#">My Book Nook</a></li>
                     <li><a href="#">Library</a></li>
@@ -32,10 +34,13 @@
         </div>
     </header>
     <main>
-        <!-- Instead of having images on html, make them divs that the js will append to or make origianl images blank and replace source value of those images could leave teh backgoround invisible. have images change in width and height 
-        imge property that adjust apect ratio. Can't have fixed image height.-->
+
+        <!-- https://upload.wikimedia.org/wikipedia/commons/2/2b/Bookshelf.jpg -->
+
         <!-- New Section  -->
         <div class="grid-container">
+
+
             <div class="grid-x grid-margin-x small-up-1 medium-up-2">
                 <!-- Movie -->
                 <div class="cell">
@@ -43,10 +48,10 @@
                         <div class="card-divider">
                             Movies!
                         </div>
-                        <div class="card-section">
+                        <div class="card-section card-img">
                             <img id="movieImg" class="image align-self" src="https://via.placeholder.com/200">
                         </div>
-                        <div class="card-section">
+                        <div class="card-section info">
                             <h4 id="movieTitle"></h4>
                             <div id="movieCard">This is a row of cards.</div>
                             <!-- <p>This row of cards is embedded in an X-Y Block Grid.</p> -->
@@ -59,10 +64,10 @@
                         <div class="card-divider">
                             Books!
                         </div>
-                        <div class="card-section">
+                        <div class="card-section card-img">
                             <img id="bookImg" class="image align-self" src="https://via.placeholder.com/200">
                         </div>
-                        <div class="card-section">
+                        <div class="card-section info">
                             <h4 id="bookTitle"></h4>
                             <div id="bookCard">This is a card.</div>
                             <!-- <p>It has an easy to override visual style, and is appropriately subdued.</p> -->
@@ -72,13 +77,14 @@
     </main>
     <footer class="footer-nav row top-bar">
 
-    </footer> 
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-    integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-<!--JQuery Link-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!--Local JS Link-->
-<script src="assets/api.js"></script>
-<script src="assets/script.js"></script>
+        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <!--JQuery Link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Local JS Link-->
+    <script src="assets/api.js"></script>
+    <script src="assets/script.js"></script>
 </body>
+
 </html>
