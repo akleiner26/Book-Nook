@@ -4,6 +4,7 @@ var searchTxt = $("#searchTxt");
 var searchBtn = $("#searchBtn");
 var movieImg = $("#movieImg");
 var bookImg = $("#bookImg");
+var bookImgDiv = $("#bookImgDiv");
 var bookTitle= $("#bookTitle");
 var movieTitle= $("#movieTitle");
 var movieCard= $("#movieCard");
@@ -65,7 +66,9 @@ var sendLocalStorage = (movieTitle, bookTitle) => {
 }
 
 var renderBookImg = (bookImageData) => {
-    bookImg.attr("src", bookImageData.value[0].thumbnailUrl);
+    var newImage = $("<img>");
+    newImage.addClass("image align-self").attr("src", bookImageData.value[0].thumbnailUrl).attr("alt", "Book Cover Image").attr("id", "bookImg");
+    bookImgDiv.append(newImage);
 }
 
 // Event listener for search button and anon function to run ajax function
