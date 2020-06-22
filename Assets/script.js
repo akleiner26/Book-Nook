@@ -75,7 +75,7 @@ var renderBookImg = (bookImageData) => {
 // Event listener for search button and anon function to run ajax function
 $(searchBtn).on("click", function(movieData, bookData){
     $("body").attr("class", "background2");
-    $(".grid-container").css("display", "block");
+    $("#grid-container").css("display", "block");
     getData(searchTxt.val());
     searchTxt.val("");
 });
