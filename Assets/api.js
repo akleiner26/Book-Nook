@@ -17,9 +17,9 @@ function getData(movieTitle) {
 
         // AJAX method to get book data
         var bookLimit = 50;
-
+        var cors = "https://cors-anywhere.herokuapp.com/";
         $.ajax({
-            url: "https://itunes.apple.com/search?term=" + movieGenre + "&entity=ebook&limit=" + bookLimit,
+            url: cors + "https://itunes.apple.com/search?term=" + movieGenre + "&entity=ebook&limit=" + bookLimit,
             method: "GET"
         }).then((bookData) => {
             bookData = JSON.parse(bookData);
