@@ -18,12 +18,12 @@ Future plans for this site include deploying "My Book Nook" and "Library" pages.
 
 ## Contributors
 
-[Gary Bergman](https://github.com/Gary-Bergman)
-[Susan Holland](https://github.com/SEGH)
-[Joshua Homer](https://github.com/Jchomer90)
-[Andrew Kleiner](https://github.com/akleiner26)
+* [Gary Bergman](https://github.com/Gary-Bergman)
+* [Susan Holland](https://github.com/SEGH)
+* [Joshua Homer](https://github.com/Jchomer90)
+* [Andrew Kleiner](https://github.com/akleiner26)
 
-<img src="Assets/screenShots/screenshot1.jpeg" alt="homepage" width="700">
-<img src="Assets/screenShots/screenshot2.jpeg" alt="search" width="700">
-<img src="Assets/screenShots/screenshot3.jpeg" alt="results" width="700">
+<img src="./Assets/screenShots/screenshot1.jpeg" alt="homepage" width="700">
+<img src="./Assets/screenShots/screenshot2.jpeg" alt="search" width="700">
+<img src="./Assets/screenShots/screenshot3.jpeg" alt="results" width="700">
 
