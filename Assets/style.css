@@ -32,6 +32,19 @@ ul.dropdown.menu {
     color: #f62502
 }
 
+#bookNook:hover {
+    font-size: 18px;
+}
+
+#bookNookButton:focus {
+    color: #f62502
+}
+
+#bookNookCard,
+#libraryCard {
+    background-color: #ff722c;
+}
+
 a {
     color: #5e8205;
 }
@@ -45,6 +58,9 @@ a:hover {
     margin-bottom: 80px;
     height: auto;
     width: auto;
+}
+
+#grid-container {
     display: none;
 }
 

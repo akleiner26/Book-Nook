@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Nook</title>
     <!-- Add favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
@@ -18,10 +19,9 @@
         <div class="top-bar small-up-1">
             <div class="top-bar-left">
                 <ul class="dropdown menu" data-dropdown-menu>
-                    <li id="bookNook" class="menu-text">Book Nook</li>
-                    <!-- Optional Links -->
-                    <li><a href="#">My Book Nook</a></li>
-                    <li><a href="#">Library</a></li>
+                    <a id="bookNook" class="menu-text" href="index.html">Book Nook</a>
+                    <!-- <a href="myBookNook.html">My Book Nook</a>
+                    <a href="library.html">Library</a> -->
                 </ul>
             </div>
             <!-- Search Bar/Button -->
@@ -33,25 +33,11 @@
             </div>
         </div>
 
-        <!-- 
-        <ul class="dropdown menu" data-dropdown-menu>
-            <li>
-              <a href="#">Item 1</a>
-              <ul class="menu">
-                <li><a href="#">Item 1A</a></li>
-        
-              </ul>
-            </li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-            <li><a href="#">Item 4</a></li>
-          </ul> -->
-
     </header>
     <main>
 
         <!-- Grid container for entire main section  -->
-        <div class="grid-container">
+        <div class="grid-container" id="grid-container">
 
 
             <div class="grid-x grid-margin-x small-up-1 medium-up-2">
@@ -89,6 +75,9 @@
                                 <a id="bookLink" target="_blank">
                                     <h3 id="bookTitle"></h3>
                                 </a>
+                                <!-- Anchor and button to bookNook (links) -->
+                                <!-- <a id="bookNookBtn" class="button">Save to My Book Nook</a> -->
+                                <!-- Book info appended below -->
                                 <div id="bookCard">This is a card.</div>
                             </div>
                         </div>
@@ -109,8 +98,8 @@
     <!--JQuery Link-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--Local JS Link-->
-    <script src="assets/api.js"></script>
-    <script src="assets/script.js"></script>
+    <script src="./Assets/api.js"></script>
+    <script src="./Assets/script.js"></script>
 
 </body>
 
