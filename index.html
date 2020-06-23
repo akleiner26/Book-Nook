@@ -18,10 +18,9 @@
         <div class="top-bar small-up-1">
             <div class="top-bar-left">
                 <ul class="dropdown menu" data-dropdown-menu>
-                    <li id="bookNook" class="menu-text">Book Nook</li>
-                    <!-- Optional Links -->
-                    <li><a href="#">My Book Nook</a></li>
-                    <li><a href="#">Library</a></li>
+                    <a id="bookNook" class="menu-text" href="index.html">Book Nook</a>
+                    <a href="myBookNook.html">My Book Nook</a>
+                    <a href="library.html">Library</a>
                 </ul>
             </div>
             <!-- Search Bar/Button -->
@@ -51,7 +50,7 @@
     <main>
 
         <!-- Grid container for entire main section  -->
-        <div class="grid-container">
+        <div class="grid-container" id="grid-container">
 
 
             <div class="grid-x grid-margin-x small-up-1 medium-up-2">
@@ -89,6 +88,9 @@
                                 <a id="bookLink" target="_blank">
                                     <h3 id="bookTitle"></h3>
                                 </a>
+                                <!-- Anchor and button to bookNook (links) -->
+                                <a id="bookNookBtn" class="button">Save to My Book Nook</a>
+                                <!-- Book info appended below -->
                                 <div id="bookCard">This is a card.</div>
                             </div>
                         </div>
